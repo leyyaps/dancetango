@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  date: 2018-01-19
+  time: 2018-01-19 13:12:21
+  location: MyString
+  info: MyText
+  booking_link: MyString
+  price: 1.5
+
+two:
+  title: MyString
+  date: 2018-01-19
+  time: 2018-01-19 13:12:21
+  location: MyString
+  info: MyText
+  booking_link: MyString
+  price: 1.5

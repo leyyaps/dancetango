@@ -1,0 +1,63 @@
+<%= form_for(course) do |f| %>
+  <% if course.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(course.errors.count, "error") %> prohibited this course from being saved:</h2>
+
+      <ul>
+      <% course.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  
+
+  <div class="field form-group">
+    <%= f.label :title %>
+    <%= f.text_field :title, :class =>'form-control' %>
+  </div>
+
+  <div class="field form-group">
+    <%= f.label :date %>
+    <%= f.date_select :date, :class =>'form-control' %>
+  </div>
+  
+  <div class="field form-group">
+        <%= f.label :start_time %>
+        <%= f.time_select :start_time, :class =>'form-control' %>
+  </div>
+
+  <div class="field form-group">
+        <%= f.label :finish_time %>
+        <%= f.time_select :finish_time, :class =>'form-control' %>
+  </div>
+
+  <div class="field form-group">
+    <%= f.label :location %>
+    <%= f.text_field :location, :class =>'form-control' %>
+  </div>
+
+  <div class="field form-group">
+    <%= f.label :info %>
+    <%= f.text_area :info, :class =>'form-control' %>
+  </div>
+
+  <div class="field form-group">
+    <%= f.label :booking_link %>
+    <%= f.text_field :booking_link, :class =>'form-control' %>
+  </div>
+  <div class="field form-group">
+    <%= f.label :private_link %>
+    <%= f.text_field :private_link, :class =>'form-control' %>
+  </div>
+
+  <div class="field form-group">
+    <%= f.label :price %>
+    <%= f.text_field :price, :class =>'form-control' %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit :class =>'btn btn-primary' %>
+  </div>
+<% end %>
