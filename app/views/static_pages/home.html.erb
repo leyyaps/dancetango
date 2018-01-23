@@ -1,163 +1,72 @@
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <h1 class="display-4 text-white">dancetango.net</h1>
+    <p class="lead text-white ml-0">New website under contruction</p>
+  </div>
+</div>
+
+
+
 <div class="container">
-    <div class="text-center">
-      <h1 class="mt-5">dancetango.net</h1>
-      <p>New website under contruction</p>
-      <hr>
-    </div>
 
-    <div class="row py-3">
-      <div class="col-md-6 text-center">
-        <h2> Autumn Term-Musicality and Creativity</h2>
-        <p>
-        <strong>Starts:</strong> Thurs 28th Sept<br>  
-        <strong>Finishes:</strong> Thurs 21st Dec<br>
-        <strong>Time:</strong> 8:15pm-10.00pm<br>
-        <strong>Location:</strong> Bow Road Methodist Church, E3 4LY<br>
-        </p>
-        
-        <p>This series of mixed level classes will focus on bringing your creativity and musicality to the forefront of your dance. If you are new to tango the classes will help you hone the fundamental steps, such as the cross and pivots, as well as introducing a few new ones, such as boleos, wraps and ganchos. If you are more experienced, the classes will enable you to integrate new movement into your dance with creativity, musicality and style.</p>
-
-        <p>The class finishes at 9.30 and is followed by a 30 minute practice session.
-        There is also a half term break on Thurs 26th October.</p>
-        
-        <table class="table table-striped">
-        
-          <tbody>
-            <tr>
-             
-              <td>Earlybird</td>
-              <td>£120</td>
+      <div class="row py-1">
+        <% @courses.each do |course| %>
+        <div class="col-md-6 text-center mt-4">
           
-            </tr>
-            <tr>
-           
-              <td>Full-price</td>
-              <td>£130</td>
-           
-            </tr>
-            <tr>
-            
-              <td>Drop-in</td>
-              <td>£12.50</td>
-          
-            </tr>
-          </tbody>
-        </table>
 
 
-        <strong>Early bird: Valid until Friday 30th Sept</strong>
 
-
-       <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-       <input type="hidden" name="cmd" value="_s-xclick">
-       <input type="hidden" name="hosted_button_id" value="5TXQV2CX5G85J">
-       <input type="image" src="https://www.paypalobjects.com/en_US/GB/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="PayPal – The safer, easier way to pay online!">
-       <img alt="" border="0" src="https://www.paypalobjects.com/en_GB/i/scr/pixel.gif" width="1" height="1">
-       </form>
-      </div> 
-
-      <div class="col-md-6 text-center">
-        <h2>Performance Group</h2>
+          <h2><%= course.title %></h2>
           <p>
-          <strong>Starts:</strong> Sat 21st Oct, Sat 4th Nov, Sat 2nd Dec<br>  
-          <strong>Finishes:</strong> Sat 16th Dec<br>
-          <strong>Time:</strong> 4-6pm<br>
-          <strong>Location:</strong> Berkhamsted<br>
+          <strong>Date:</strong> <%= course.date.strftime("%A %d %B") %><br>
+
+          <strong>Time:</strong> <%= course.start_time.strftime("%H:%M") %> til <%= course.finish_time.strftime("%H:%M") %> <br>
+          <strong>Location:</strong> <%= course.location %><br>
           </p>
           
-          <p>This series of four workshops will focus on giving you the experience of working on a choreography. The first hour of each workshop will focus on technique. Steps and decorations will be taught and practiced that will then be used in the choreography. In the second half, we will use a professional choreographic process to create a choreography that will culminate in a performance. These workshops are open to advanced dancers only. Must book in advance.</p>
+          <p><%= course.info %></p>
 
-          <p>Please note these workshops are not weekly.</p>
-              
-            <table class="table table-striped">
-              
-                <tbody>
-                  <tr>
-                   
-                    <td>Earlybird</td>
-                    <td>£120</td>
-                
-                  </tr>
-                  <tr>
-                 
-                    <td>Full-price</td>
-                    <td>£150</td>
-                 
-                  </tr>
-                  <tr>
-                  
-                    <td>Drop-in</td>
-                    <td>£40</td>
-                
-                  </tr>
-                </tbody>
-              </table>
-
-
-
-
-      <strong>Early bird: Valid until Sat 7th Oct</strong>
-     
-
-      <form class="" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-      <input type="hidden" name="cmd" value="_s-xclick">
-      <input type="hidden" name="hosted_button_id" value="562HPEJ655GHU">
-      <table>
-      <tr><td class="text-center"><input type="hidden" name="on0" value="Performance Group">Performance Group</td></tr><tr><td><select name="os0">
-        <option value="Earlybird">Earlybird £120.00 GBP</option>
-      </select> </td></tr>
-      </table>
-      <input type="hidden" name="currency_code" value="GBP">
-      <input type="image" src="https://www.paypalobjects.com/en_US/GB/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="PayPal – The safer, easier way to pay online!">
-      <img alt="" border="0" src="https://www.paypalobjects.com/en_GB/i/scr/pixel.gif" width="1" height="1">
-      </form>
-    
-    </div>
-  </div>
-    <hr>
-    <div class="row py-3">
-
-            <div class="col-md-6 text-center">
-              <h2>Follower's Technique</h2>
-              <p>
-              <strong>Date:</strong> Sat 25th Nov<br>  
+         
           
-              <strong>Time:</strong>  1:30pm-2:30pm<br>
-              <strong>Location:</strong> Radlett Village Institute, 413 Watling Street, WD7 7JG Radlett<br>
-              </p>
-              
-              <p>This workshop will focus on styling and technique. Through a series of exercises we will develop our ability to move with precision and grace. We will explore how we can use the feet to improve stability, our connection with the ground, and express the music.  We will also practice decorations experimenting with how and when to include them in our dancing..</p>
+          <table class="table table-striped">
+          
+            <tbody>
+              <tr>
+               
+                <td>Price</td>
+                <td>£<%= course.price %></td>
+            
+              </tr>
+           
+            </tbody>
+          </table>
 
-              <p>Must book in advance as there are limited places available for this workshop. The workshop is followed by a practica until 6pm.</p>
-              
-              <table class="table table-striped">
-              
-                <tbody>
-                  <tr>
-                   
-                    <td>Advanced Booking</td>
-                    <td>£15</td>
-                
-                  </tr>
-                  
-                  </tr>
-                </tbody>
-              </table>
+         <div>
+        <strong>Class Booking</strong>
+         <%= render html: course.booking_link.html_safe %>
+         <hr>
+         </div> 
+         
+         <% if course.private_link.present? %>
+         <div class="mt-2">
+            <strong>Private Lessons</strong>
+           <%= render html: course.private_link.html_safe %>
+           <hr>
+         </div>
+         <%end%>
+        
 
+        <div class="row mt-2">
+          <div class="mx-auto">
+            <%= link_to 'More info', course, :class => 'text-white btn btn-primary btn-lg btn-block' %>
+          </div>
+          
+          
+        </div>  
+        </div>
+        <% end %> 
 
-
-
-      <strong>Paypal booking</strong>
-      </p>
-
-      <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-      <input type="hidden" name="cmd" value="_s-xclick">
-      <input type="hidden" name="hosted_button_id" value="Q2B59QDJ6F85A">
-      <input type="image" src="https://www.paypalobjects.com/en_US/GB/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="PayPal – The safer, easier way to pay online!">
-      <img alt="" border="0" src="https://www.paypalobjects.com/en_GB/i/scr/pixel.gif" width="1" height="1">
-      </form>
-            </div> 
-
+        
     </div>
 
 

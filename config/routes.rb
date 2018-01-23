@@ -1,10 +1,7 @@
 Rails.application.routes.draw do
-  # devise_scope :admin do
-  #    get "/sign_in" => "devise/sessions#new" # custom path to login/sign_in
-  #    get "/sign_up" => "devise/registrations#new", as: "new_admin_registration" # custom path to sign_up/registration
-  #  end
+ 
 
-  devise_for :admins
+  devise_for :admins, :skip => [:registrations]
 
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   resources :courses

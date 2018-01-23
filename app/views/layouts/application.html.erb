@@ -10,8 +10,16 @@
   </head>
 
   <body>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
+
+    <%= render 'partials/nav' %>
+
+    
+    <% flash.each do |key, value| %>
+          <div class="<%= flash_class(key) %>">
+                <%= value %>
+          </div>
+    <% end %>
+
     <%= yield %>
   </body>
 </html>

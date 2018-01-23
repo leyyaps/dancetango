@@ -32,3 +32,20 @@
   margin-top: 5px;
   margin-bottom: 5px;
  }
+
+.jumbotron {
+  background:url('../images/tango_jumbo.jpg'); 
+  background-size:cover;
+
+}
+
+
+a.nav-link:hover { 
+  background-color: #c52f24;
+  
+}
+.navbar-light .navbar-nav .nav-link:hover {
+    color: #fff;
+}
+
+
